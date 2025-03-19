@@ -42,7 +42,7 @@ function App() {
   return (
     <>
       <header className="relative">
-        <Navbar />
+        </Navbar>
       </header>
       <main className="bg-blue-500 flex flex-col items-center justify-center min-h-screen gap-8 overflow-hidden">
         <h1 className="text-7xl font-bold text-center drop-shadow-2xl">
