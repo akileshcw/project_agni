@@ -4,13 +4,14 @@ import { Menu } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="lg:max-w-5xl md:max-w-xl py-4 px-2 flex justify-between items-center rounded-full absolute left-1/5 w-full bg-white top-2 shadow-lg">
+    <nav className="lg:max-w-3xl md:max-w-xl py-4 px-2 flex justify-between items-center rounded-full absolute md:-translate-x-1/2 md:left-1/2 bg-white top-2 shadow-lg w-full">
       {/* logo */}
       <div>
         <h2 className="text-2xl font-bold ml-4">Agni</h2>
       </div>
 
-      <div>
+      {/* medium screen list */}
+      <div className="hidden md:flex">
         <ul className="flex items-center justify-center gap-4 text-xl">
           <li>Home</li>
           <li>Student</li>
@@ -19,11 +20,20 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="mr-2">
-        <Button>Login</Button>
+      {/* medium screen and above login */}
+
+      <div className="mr-2 hidden md:flex">
+        <Button
+          onClick={() => {
+            console.log("Login button clicked");
+          }}
+        >
+          Login
+        </Button>
       </div>
+
       {/* mobile menu sheet */}
-      <div className="mr-2 lg:hidden">
+      <div className="mr-2 md:hidden">
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline">
