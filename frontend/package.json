@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -33,6 +34,7 @@
     "@tanstack/react-query": "^5.68.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "d3-array": "^3.2.4",
     "date-fns": "^3.6.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.482.0",
