@@ -4,3 +4,5 @@ backend/node_modules
 frontend/node_modules
 backend/.env
 frontend/.env
+backend/auth-service/node_modules
+backend/course-service/node_modules
