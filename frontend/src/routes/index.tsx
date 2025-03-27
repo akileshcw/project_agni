@@ -1,14 +1,18 @@
+import { createFileRoute } from "@tanstack/react-router";
 import { toast } from "sonner";
-import { Button } from "./components/ui/button";
-// import Navbar from "./components/custom/Navbar";
 import { useEffect, useState } from "react";
-import { convertDateToString } from "./lib/dateconversion";
+import { motion } from "motion/react";
+import Navbar from "@/components/custom/Navbar";
+import { Button } from "@/components/ui/button";
 
-function App() {
+export const Route = createFileRoute("/")({
+  component: Index,
+});
+
+function Index() {
   const [count, setCount] = useState(0);
   const [message, setMessage] = useState("");
   const [body, setBody] = useState([]);
-  const today = new Date();
 
   const fetchBody = async () => {
     try {
@@ -42,16 +46,18 @@ function App() {
 
   return (
     <>
-      <header className="relative w-20 h-20">
-        <div className="gradient-border" />
-        <div className="text-center font-bold text-3xl">
-          {convertDateToString(today)}
-        </div>
+      <header className="relative">
+        <Navbar />
       </header>
       <main className="bg-blue-500 flex flex-col items-center justify-center min-h-screen gap-8 overflow-hidden">
-        <h1 className="text-7xl font-bold text-center drop-shadow-2xl">
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2, ease: "backInOut" }}
+          className="text-7xl font-bold text-center drop-shadow-2xl border-2 border-green-500"
+        >
           hello world
-        </h1>
+        </motion.h1>
         <Button
           onClick={() => {
             toast.success("Do you get the toast?");
@@ -106,5 +112,3 @@ function App() {
     </>
   );
 }
-
-export default App;
