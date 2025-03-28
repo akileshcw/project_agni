@@ -1,10 +1,14 @@
 import { Request, Response } from "express";
 const express = require("express");
+import cors from "cors";
+import bodyParser from "body-parser";
 const userRouter = require("./routes/user");
 
 const app = express();
 const port = process.env.PORT || 3002;
 
+app.use(cors());
+app.use(bodyParser.json());
 app.get("/", (req: Request, res: Response) => {
   console.log("the request is from ", req.query, req.hostname);
   res.send("Hello. This is Akil. Welcome");
