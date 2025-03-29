@@ -8,10 +8,11 @@
   left: 50%;  /* Move it to the center */
   transform: translateX(-50%);  /* Shift it back by 50% of its width */
   width: 50%;
-  height: 3rem;
-  border-radius: 2%;
-  margin: 0;
-  padding: 10px;
+  border-radius:12px;
+  margin: 4px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-top:4px; padding-bottom:4px;
   background-color: var(--tertiary-color);
   box-shadow:
     -5px 5px 10px hsl(0, 0%, 40%),  /* Left shadow */
@@ -35,9 +36,9 @@
 }
 
 .register-btn {
-  padding: 1rem;
+  padding: 0.75rem;
   background-color: var(--primary-color);
   color: var(--tertiary-color);
-  border-radius: 4%;
+  border-radius:12px;
   border-style: none
 }
