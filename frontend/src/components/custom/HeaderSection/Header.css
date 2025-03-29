@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: fixed;
+  top: 0;  /* Keeps it at the top */
+  left: 50%;  /* Move it to the center */
+  transform: translateX(-50%);  /* Shift it back by 50% of its width */
+  width: 50%;
+  height: 3rem;
+  border-radius: 2%;
+  margin: 0;
+  padding: 10px;
+  background-color: var(--tertiary-color);
+  box-shadow:
+    -5px 5px 10px hsl(0, 0%, 40%),  /* Left shadow */
+     5px 5px 10px hsl(0, 0%, 40%);  /* Right & Bottom shadow */
+     z-index:1;
+}
+
+
+.Nav {
+  display: flex;
+  margin: 2px
+}
+
+.Nav-list {
+  color: var(--secondary-color);
+  margin: 12px
+}
+
+.Nav-list:hover {
+  color: var(--primary-color)
+}
+
+.register-btn {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border-radius: 4%;
+  border-style: none
+}

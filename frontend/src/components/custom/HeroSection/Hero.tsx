@@ -2,7 +2,7 @@ import "./Hero.css";
 export function HeroSection() {
     return (
      <>
-     <div className='Backdrop'></div>
+     <div className='hero-section'>
      <h1> Your Future with Tech</h1>
      <h2>Learn, Certify, and Get Hired</h2>
      <h4>Stay updated with the latest tech news, find job opportunities, 
@@ -11,6 +11,8 @@ export function HeroSection() {
       <button className="Register-Student-primary">Join Now</button>
       <button className="Register-Recruiter-secondary">For Recruiters</button>
       </div>
+     </div>
+     
       
       </>
     );

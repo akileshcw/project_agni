@@ -1,40 +1,20 @@
-#root{
-    display:flex;
-    justify-content: center;
-    width:100%;
-    height:100vh;
-    background-color: rgb(255, 255, 255);
-}
-#header{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    gap:2rem;
-    width:50%;
-    height:3rem;
-    border-radius:2%;
-    border-color: black;
-    border-style: solid ;
-    margin:0;
-   
-    background-color: rgb(255, 247, 239);
+:root{
+  /*colors*/
+  --primary-color:#FF7820;
+  --secondary-color:#333333;
+  --tertiary-color:#ffffff;
+  --accent-color:#FFBB00;
+  --accent2-color:#20C997;
+
+  /*background color*/
+  --background-color:HSL(23, 100%, 85%);
+  /*shadow*/
+  --shadow-1:var(hsl(0,0%,20%),0.3);
 }
 
-.Nav-list
+.landing-page
 {
-    margin:2px;
-
+  display:flex;
+  flex-direction: column;
+  align-items:center; justify-items: center;
 }
-.Nav-list:hover{
-    color: rgb(229, 87, 5);
-}
-
-#register-btn
-{
-    padding:0.75rem;
-    background-color: black;
-    color:aliceblue;
-    border-radius:2%;
-    border-style:none;
-}
-
