@@ -42,3 +42,9 @@
   border-radius:12px;
   border-style: none
 }
+
+.Logo
+{
+  color:var(--primary-color);
+  font-weight:800;
+}
