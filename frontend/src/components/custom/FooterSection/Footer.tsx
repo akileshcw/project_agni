@@ -4,6 +4,12 @@ import '@/components/custom/FooterSection/Footer.css';
 export function Footer() {
     return (
         <>
+        <div className='signup-section'>
+        <h1>Ready to Transform Your Career or Discover Top Talent?</h1>
+        <div className='buttons'>
+            <button className="footer-sign-up">Sign Up Now</button>
+            <button className="contact-sales">Contsct Sales</button>
+        </div>
         <div className="footer-div">
             {/* Quick Links Section */}
             <div className="quick-links">
@@ -49,6 +55,9 @@ export function Footer() {
                 </ul>
             </div>
         </div>
+        <div></div>
+        </div>
+        
         </>
     );
         
