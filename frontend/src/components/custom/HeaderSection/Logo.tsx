@@ -1,6 +1,6 @@
 export function Logo(){
 return(
-    <div>Agni</div>
+    <div className="Logo">Agni</div>
 )
 }
 
