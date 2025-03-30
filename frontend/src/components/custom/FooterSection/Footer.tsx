@@ -1,4 +1,4 @@
-import '@/components/custom/Footer/Footer.css';
+import '@/components/custom/FooterSection/Footer.css';
 
 
 export function Footer() {

@@ -1,0 +1,60 @@
+.footer-div {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+   
+    background-color: var(--tertiary-color);
+    color: white;
+    padding: 30px 20px;
+    text-align:left;
+    border-radius: 20px;
+    border-color:var(--primary-color);
+    border-width:2px;  /* Applying border radius */
+}
+
+.footer-div div {
+    flex: 1;
+    min-width: 200px; /* Prevents columns from becoming too small */
+    margin: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* ✅ List heading in secondary color */
+.list-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+/* ✅ List items default in secondary color, hover in primary color */
+.list-item {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: var(--secondary-color);
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-div div {
+        min-width: 100%;
+    }
+}
