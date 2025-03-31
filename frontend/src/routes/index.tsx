@@ -6,6 +6,7 @@ import '@/App.css';
 import Footer from "@/components/custom/FooterSection/Footer";
 import Preview from "@/components/custom/PreviewSection/Preview";
 import ProductFeatures from "@/components/custom/FeatureHights/Features";
+import FAQ from "@/components/custom/FAQSection/FAQ";
 
 
 export const Route = createFileRoute("/")({
@@ -17,10 +18,12 @@ function Index() {
     <>
     <div className="landing-page">
     <HeroSection />
+    <ProductFeatures />
     <Preview/>
     <Testimonials />
+    <FAQ />
     <Footer />
-    <ProductFeatures />
+    
     </div>
        
     </>

@@ -13,7 +13,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 20px;
-    border-color:var(--primary-color);
+    border-color:var(--secondary-color);
     border-width:2px; 
     
 }
@@ -49,7 +49,7 @@ ul {
 }
 
 .list-heading {
-    font-family:"Grotesque Bricolage",sans-serif;
+    font-family:"Grotesque Bricolage","Roboto",sans-serif !important;
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
