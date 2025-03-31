@@ -49,6 +49,7 @@ ul {
 }
 
 .list-heading {
+    font-family:"Grotesque Bricolage",sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
