@@ -1,0 +1,7 @@
+.process-img
+{
+    background-color:var(--primary-color);
+    padding:20px;
+    width:70%;
+    margin-top:-100px;
+}

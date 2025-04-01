@@ -20,11 +20,12 @@
 #image1
 {
     width: 900px;
-    height: 600px;
+    height: auto;
 }
 
 #image2
 {
     width: 300px;
+    height:auto;
   
 }

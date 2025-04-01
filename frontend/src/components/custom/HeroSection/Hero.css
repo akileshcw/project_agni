@@ -3,7 +3,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 70%;
+  height: 550px;
   background: linear-gradient(135deg,  
   rgba(255, 255, 255, 0.6) 5%,  /* Soft glossy highlight */
   #FBEFD6 25%,  /* Warm pastel shade */
@@ -13,7 +14,6 @@
 );
   backdrop-filter: blur(10px); 
   border-radius: 50px;
-  padding:100PX;
   gap:16px;
 }
 
@@ -32,15 +32,16 @@
 
 h1 {
   font-size: 2.5rem;
-  color: #333; /* Example color */
+  color:var(--secondary-color);/* Example color */
   text-align: center;
   font-weight: bold;
-  margin-top: -20px;
+  margin-top: -100px;
 }
 
 h2 {
   font-size: 1.8rem;
   text-align: center;
+  font-weight: bold;
   color:var(--primary-color);
   margin-top: -20px;
 }
@@ -58,7 +59,7 @@ h4 {
   display: flex;
   justify-content: center;
   gap: 64px;
-  margin-top: 40px;
+  
 }
 
 .Register-Student-primary {
