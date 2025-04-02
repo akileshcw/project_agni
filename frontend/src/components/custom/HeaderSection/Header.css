@@ -37,10 +37,17 @@
 
 .register-btn {
   padding: 0.75rem;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: var(--tertiary-color);
   border-radius:12px;
-  border-style: none
+  border-style: none;
+}
+
+.register-btn:hover{
+  border-color:var(--primary-color);
+  border-style:solid;
+  color:var(--tertiary-color);
+  background-color:var(--primary-color);
 }
 
 .Logo

@@ -5,9 +5,9 @@ import Testimonials from "@/components/custom/Testimonials/Testimonials";
 import '@/App.css';
 import Footer from "@/components/custom/FooterSection/Footer";
 import Preview from "@/components/custom/PreviewSection/Preview";
-
 import FAQ from "@/components/custom/FAQSection/FAQ";
 import Process from "@/components/custom/ProcessSection/Process";
+import { Recruiter } from "@/components/custom/RecruiterSection/Recruiter";
 
 
 export const Route = createFileRoute("/")({
@@ -21,6 +21,7 @@ function Index() {
     <HeroSection />
     <Process />
     <Preview/>
+    <Recruiter />
     <Testimonials />
     <FAQ />
     <Footer />

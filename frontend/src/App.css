@@ -1,15 +1,21 @@
 :root{
   /*colors*/
-  --primary-color:#FF7820;
-  --secondary-color:#333333;
-  --tertiary-color:#ffffff;
-  --accent-color:#FFBB00;
-  --accent2-color:#20C997;
+  --primary-color: hsl(22, 100%, 56%);      /* #FF7820 */
+  --secondary-color: hsl(0, 0%, 20%);       /* #333333 */
+  --tertiary-color: hsl(0, 0%, 100%);       /* #ffffff */
+  --accent-color: hsl(42, 100%, 50%);       /* #FFBB00 */
+  --accent2-color: hsl(164, 72%, 46%);      /* #20C997 */
 
   /*background color*/
   --background-color:HSL(23, 100%, 85%);
   /*shadow*/
   --shadow-1:var(hsl(0,0%,20%),0.3);
+  --primary-font: "Bricolage Grotesque", sans-serif;
+  --secondary-font:"Roboto";
+  --font-small: 12px;
+    --font-medium: 16px;
+    --font-large: 24px;
+    --font-xlarge: 32px;
 }
 
 .landing-page
