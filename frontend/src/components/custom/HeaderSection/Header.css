@@ -13,7 +13,7 @@
   padding-left:10px;
   padding-right:10px;
   padding-top:4px; padding-bottom:4px;
-  background-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
   /* Right & Bottom shadow */
      z-index:1;
 }
@@ -26,7 +26,7 @@
 }
 
 .Nav-list {
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
   margin: 12px
 }
 

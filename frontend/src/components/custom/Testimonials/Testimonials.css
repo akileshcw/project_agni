@@ -12,7 +12,8 @@
 );
 backdrop-filter: blur(15px);
 -webkit-backdrop-filter: blur(15px);
-margin: -20px;
+margin-top:-20px;
+
 }
 
 .testimonial-wrapper {
