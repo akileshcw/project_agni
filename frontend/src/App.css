@@ -1,10 +1,15 @@
 :root{
   /*colors*/
-  --primary-color: hsl(22, 100%, 56%);      /* #FF7820 */
-  --secondary-color: hsl(0, 0%, 20%);       /* #333333 */
-  --tertiary-color: hsl(0, 0%, 100%);       /* #ffffff */
+  --primary-color: hsl(22, 100%, 46%);      /* #FF7820 changed from 56 to 46*/
+  --secondary-color: hsl(0, 0%, 20%);
+  --tertiary-color: hsl(0, 0%, 85%);
+       /* #333333 */
+  /*--tertiary-color: hsl(0, 0%, 100%);*/       /* #ffffff */
   --accent-color: hsl(42, 100%, 50%);       /* #FFBB00 */
-  --accent2-color: hsl(164, 72%, 46%);      /* #20C997 */
+  --accent2-color: hsl(164, 72%, 46%);
+  --secondary-light-1: hsl(0, 0%, 35%); /* Lighter Gray */
+--secondary-light-2: hsl(0, 0%, 50%); /* Medium Gray */
+--secondary-light-3: hsl(0, 0%, 65%); /* Soft Gray */     /* #20C997 */
 
   /*background color*/
   --background-color:HSL(23, 100%, 85%);
@@ -22,5 +27,6 @@
 {
   display:flex;
   flex-direction: column;
-  align-items:center; justify-items: center;gap:64px;
+  align-items:center; justify-items: center;
+  background-color:var(--secondary-color) ;
 }

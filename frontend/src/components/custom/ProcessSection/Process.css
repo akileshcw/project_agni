@@ -1,7 +1,172 @@
-.process-img
-{
-    background-color:var(--primary-color);
-    padding:20px;
-    width:70%;
-    margin-top:-100px;
+/*.process {
+    background: linear-gradient(to bottom, #111, #222);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: -70px;
+    flex-direction: column;
+    gap:50px;
+}
+
+.process h1 {
+    font-family: var(--primary-font);
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: -60px;
+    color: var(--secondary-light-1);
+}
+
+.learners-section{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.learners-section h2 {
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.learners-container {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+}
+
+.learner-assets {
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.learners-section h3 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--tertiary-color);
+    padding: 4px;
+    margin: -50px;
+}
+
+
+.pic1,.pic2,.pic3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:25%;
+}
+
+
+.description {
+    background:#000000;
+    border-color:  var(--secondary-color);
+    color: var(--tertiary-color) !important; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    font-size:1rem; 
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: auto; 
+    position: static; 
+}
+*/
+
+.process {
+    background: linear-gradient(to bottom, #111, #222);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    margin-top: -70px;
+    flex-direction: column;
+    gap:20px;
+}
+
+.process h1 {
+    font-family: var(--primary-font);
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: -60px;
+    color: var(--secondary-light-1);
+}
+
+.learners-section,.recruiters-container{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.learners-section h2,.recruiters-container h2 {
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.learners-container,.recruiters-container {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    margin-top: 40px; /* Adds space between h2 and the 3 sections */
+    
+}
+
+.learner-assets {
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.learners-section h3 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--tertiary-color);
+    
+}
+
+/* Fixing hover description issue */
+.pic1,.pic2,.pic3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:25%;
+}
+
+/*Hidden description div */
+.description {
+    background:#000000; /* Darker background */
+    border-color:  var(--secondary-color);
+    color: var(--tertiary-color) !important; /* Fully bright text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    font-size:1rem; /* Increase size */
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: auto; /* Remove full height */
+    position: static; /* Remove absolute positioning */
 }

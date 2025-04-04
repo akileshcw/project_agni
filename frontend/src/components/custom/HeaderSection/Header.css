@@ -13,21 +13,20 @@
   padding-left:10px;
   padding-right:10px;
   padding-top:4px; padding-bottom:4px;
-  background-color: var(--tertiary-color);
-  box-shadow:
-    -5px 5px 10px hsl(0, 0%, 40%),  /* Left shadow */
-     5px 5px 10px hsl(0, 0%, 40%);  /* Right & Bottom shadow */
+  background-color: var(--secondary-color);
+  /* Right & Bottom shadow */
      z-index:1;
 }
 
 
 .Nav {
   display: flex;
-  margin: 2px
+  margin: 2px;
+  
 }
 
 .Nav-list {
-  color: var(--secondary-color);
+  color: var(--tertiary-color);
   margin: 12px
 }
 
@@ -37,21 +36,23 @@
 
 .register-btn {
   padding: 0.75rem;
-  background-color: var(--secondary-color);
-  color: var(--tertiary-color);
-  border-radius:12px;
-  border-style: none;
-}
-
-.register-btn:hover{
-  border-color:var(--primary-color);
-  border-style:solid;
   color:var(--tertiary-color);
   background-color:var(--primary-color);
-}
+  border-style:solid;
+  
+  border-radius:12px;
 
+}
 .Logo
 {
   color:var(--primary-color);
   font-weight:800;
 }
+
+
+.register-btn:hover{
+  border-width:1px;
+  border-color:var(--tertiary-color);
+}
+
+
