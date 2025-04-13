@@ -16,7 +16,7 @@
   /*shadow*/
   --shadow-1:var(hsl(0,0%,20%),0.3);
   --primary-font: "Bricolage Grotesque", sans-serif;
-  --secondary-font:"Roboto";
+  --secondary-font:"Karla";
   --font-small: 12px;
     --font-medium: 16px;
     --font-large: 24px;
