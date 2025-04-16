@@ -1,13 +1,17 @@
-import '@/components/custom/LoginPage/Login.css';
-import '@/App.css';
-export function Login()
-{
+
+import {useState} from 'react';
+import './Login.css'
+function SignUp()
+{  const [loginHere,setLoginForm]=useState(false);
     return(
         <>
-        <div className="login-section">
+        {(loginHere?console.log("loginHere state:", loginHere):
+        
+        (
+            <div className="signup-section">
         <span className="material-symbols-outlined">
-close
-</span>
+            close
+            </span>
         <div className='animation-section'>
             <h1 className='heading'>
                 <div>A Place to Upskill</div>
@@ -39,22 +43,24 @@ close
             <button className='login-button'>Join Agni</button>
             <div>or</div>
              <div className='google-sso'>
-             <i className="fab fa-google"></i><p> Sign in with Google</p>
+             <i className="fab fa-google"></i><p> Sign up with Google</p>
              </div>
              <div className='microsoft-sso'>
-             <i className="fab fa-microsoft"></i> <p> Sign in with Microsoft</p>
+             <i className="fab fa-microsoft"></i> <p> Sign up with Microsoft</p>
              </div>
             <div className='passkey'>
             <i className="fas fa-key"></i><p> Sign up with a Passkey</p>
             </div>
-            <p>New to Agni? <a href=""className='login-link'>Signup here</a></p>
+            <p>Already a member? <a href=""className='login-link' onClick={()=>setLoginForm(true)}>login here</a></p>
             </div>
             </form>
         </div>    
         </div>
+        ))}
+        
         
         </>
     )
 }
 
-export default Login;
+export default SignUp;

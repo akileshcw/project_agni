@@ -1,37 +1,46 @@
+
 .header {
   display: flex;
+  flex-wrap: wrap; 
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  
   position: fixed;
-  top: 0;  /* Keeps it at the top */
-  left: 50%;  /* Move it to the center */
-  transform: translateX(-50%);  /* Shift it back by 50% of its width */
-  width: 50%;
-  border-radius:12px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; /* Was 50%, now more fluid */
+  max-width: 1200px;
+  
+  border-radius: 12px;
   margin: 4px;
-  padding-left:10px;
-  padding-right:10px;
-  padding-top:4px; padding-bottom:4px;
+  padding: 6px 12px;
+  
   background-color: var(--tertiary-color);
-  /* Right & Bottom shadow */
-     z-index:1;
+  z-index: 1;
 }
+
 
 
 .Nav {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 2px;
   
 }
 
 .Nav-list {
   color: var(--secondary-color);
-  margin: 12px
+  margin: 12px;
+  font-family: 'karla','sans-serif';
+  font-size:1rem;
 }
 
 .Nav-list:hover {
-  color: var(--primary-color)
+  color: var(--primary-color);
+  
 }
 
 .register-btn {
@@ -39,7 +48,7 @@
   color:var(--tertiary-color);
   background-color:var(--primary-color);
   border-style:solid;
-  
+  font-family: 'karla','sans-serif';
   border-radius:12px;
 
 }
@@ -47,12 +56,50 @@
 {
   color:var(--primary-color);
   font-weight:800;
+  font-size: 2rem;
+  
+ 
 }
 
 
 .register-btn:hover{
   border-width:1px;
   border-color:var(--tertiary-color);
+}
+
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items:center;
+    padding: 8px;
+    width: 25%;
+    gap:2px;
+  }
+
+  .Nav {
+    flex-direction: column;
+    width: 25%;
+    justify-content: center;
+  }
+
+  .Nav-list {
+    margin: 8px 0;
+    
+  }
+
+  .register-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo{
+    background-color: var(--secondary-color);
+    width:100%;
+    text-align: center;
+    padding:8px;
+  
+  }
 }
 
 

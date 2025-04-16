@@ -18,7 +18,7 @@
     border-width:2px; 
     
 }
-.signup-section
+.footer-signup-section
 {   background: linear-gradient(135deg,  
     rgba(40, 40, 40, 0.8) 0%,   /* Very mild grey */
     rgba(0, 0, 0, 0.9) 15%,   /* Almost pure black */
@@ -93,7 +93,7 @@ ul {
   border-style: none
 }
 
-.signup-section h1{
+.footer-signup-section h1{
     color: var(--secondary-light-1);
     font-family:var(--primary-font);
     font-weight: 900;
