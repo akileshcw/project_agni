@@ -50,6 +50,7 @@ close
             <p>New to Agni? <a href=""className='login-link'>Signup here</a></p>
             </div>
             </form>
+            <h4>Forgot apssword?</h4>
         </div>    
         </div>
         

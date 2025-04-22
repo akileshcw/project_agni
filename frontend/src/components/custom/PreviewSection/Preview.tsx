@@ -6,8 +6,8 @@ export function Preview()
     return(
         <>
         <div className='preview-container'>
-        <h1>Learn---Earn</h1>
-        {/*<h1>Technology News & Job Listings Preview</h1>
+        <h1>Glance at Growth</h1>
+        {/*<h1>Technology News & Job Listings Preview</h1>*/}
         <div className='floating-msg-news'>
             <p>News Section</p>
         </div>
@@ -20,12 +20,12 @@ export function Preview()
         <div className='floating-msg-suggestion'>
             <p>AI suggestions</p>
         </div>
-        <div className='preview'>*/}
+        <div className='preview'>
         
         <img  id="image1"src={preview1}></img>
-        {/*<img id="image2" src={preview2}></img>
+        {/*<img id="image2" src={preview2}></img>*/}
        
-        </div>*/}
+        </div>
         
         </div>
         

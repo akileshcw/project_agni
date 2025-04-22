@@ -9,8 +9,11 @@ export function Header()
         <>
         <div className="header">
         <Logo />
+        <div className="side-bar">
         <Navbar />
         <MyButton />
+        </div>
+        
       </div>
         
         </>

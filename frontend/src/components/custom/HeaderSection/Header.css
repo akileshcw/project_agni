@@ -1,105 +1,142 @@
-
 .header {
   display: flex;
-  flex-wrap: wrap; 
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  
+  justify-content:center;
+  gap:0px;
   position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50%; /* Was 50%, now more fluid */
+  width: 50%;
   max-width: 1200px;
-  
+
   border-radius: 12px;
-  margin: 4px;
-  padding: 6px 12px;
-  
+  padding: 0.5% 0.5%;
+
   background-color: var(--tertiary-color);
   z-index: 1;
 }
 
+/* LOGO stays at left */
+.Logo {
+  flex:1;
+  color: var(--primary-color);
+  font-weight: 800;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
 
+/* SIDEBAR (nav + button) aligned right */
+.side-bar {
+  flex:2;
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Reduced gap */
+  flex-wrap: wrap;
+}
 
+/* NAVIGATION */
 .Nav {
+  flex:1;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2px;
-  
+  gap: 1.5rem; /* Compact spacing */
 }
 
 .Nav-list {
   color: var(--secondary-color);
-  margin: 12px;
-  font-family: 'karla','sans-serif';
-  font-size:1rem;
+  font-family: 'karla', 'sans-serif';
+  font-size: 1rem;
 }
 
 .Nav-list:hover {
   color: var(--primary-color);
-  
 }
 
+/* REGISTER BUTTON */
 .register-btn {
-  padding: 0.75rem;
-  color:var(--tertiary-color);
-  background-color:var(--primary-color);
-  border-style:solid;
-  font-family: 'karla','sans-serif';
-  border-radius:12px;
 
-}
-.Logo
-{
-  color:var(--primary-color);
-  font-weight:800;
-  font-size: 2rem;
-  
- 
+  padding: 0.5rem 1rem;
+  color: var(--tertiary-color);
+  background-color: var(--primary-color);
+  border: none;
+  font-family: 'karla', 'sans-serif';
+  border-radius: 12px;
+  cursor: pointer;
 }
 
-
-.register-btn:hover{
-  border-width:1px;
-  border-color:var(--tertiary-color);
+.register-btn:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
+/* TABLETS */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    width: 50%;
+    padding: 2% 4%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
+  .side-bar {
+    gap: 1rem;
+  }
+
+  .Nav {
+    gap: 1.5rem;
+  }
+
+  .register-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .Logo {
+    font-size: 1.8rem;
+  }
+}
+
+/* MOBILE */
 @media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
-    align-items:center;
-    padding: 8px;
-    width: 25%;
-    gap:2px;
+    align-items:flex-end;
+    padding: 4%;
+    width: 50%;
+    left: 0;
+    transform: none;
+  }
+
+  .Logo {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .side-bar {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
   }
 
   .Nav {
     flex-direction: column;
-    width: 25%;
-    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
   }
 
   .Nav-list {
-    margin: 8px 0;
-    
+    text-align: center;
   }
 
   .register-btn {
     width: 100%;
     text-align: center;
-  }
-
-  .logo{
-    background-color: var(--secondary-color);
-    width:100%;
-    text-align: center;
-    padding:8px;
-  
+    font-size: 1rem;
   }
 }
-
-

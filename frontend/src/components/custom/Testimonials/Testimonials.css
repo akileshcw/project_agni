@@ -20,12 +20,14 @@ margin-top:-20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1000px;
+    width: 800px; /* let it fit the carousel naturally */
     position: relative;
 }
 
+
+
 .scroll-btn {
-    background-color: #000000; /* Black background */
+   
     color: var(--tertiary-color); /* Dynamic color from your variable */
     font-size: 32px;
     border: none;
@@ -35,40 +37,51 @@ margin-top:-20px;
     transition: 0.5s;
 }
 
-.scroll-btn:hover {
-    background-color: #222222; /* Slightly lighter black on hover */
-}
-
 .left {
     position: absolute;
-    left: -50px;
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -0%);
+    z-index: 10;
 }
 
 .right {
     position: absolute;
-    right: -50px;
+    right: 0;
+    top: 50%;
+    transform: translate(100%, -50%);
+    z-index: 10;
 }
 
 .testimonial-container {
     display: flex;
     overflow-x: hidden;
-   
-    width: 900px;
+    width:fit-content;
     border-radius: 20px;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3),  
                 5px 5px 10px rgba(0, 0, 0, 0.3);
+    overflow:hidden;
+    
+    padding:20px;
+}
+
+
+.material-symbols-outlined{
+    color:var(--primary-color);
 }
 
 .testimonial-cards {
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    
     transition: transform 0.5s ease-in-out;
+    padding:10px;
 }
 
 .testimonial-card {
+    flex:0 0 800px;
     display: flex;
     align-items: center;
-    width: 900px;
     height: 400px;
     background:#000000;
     border-radius: 20px;
@@ -89,16 +102,152 @@ margin-top:-20px;
 }
 
 .testimonial-section h1{
-   
     font-family: var(--primary-font);
     font-size: 5rem;
     font-weight: bold;
-    color: var(--secondary-light-1);
+    color: var(--tertiary-color);
 
 }
 
 .testimonial-section h4{
 color:var(--tertiary-color);
 font-size: 1.5rem;
-font-family: var();
+font-family: var(--secondary-font);
 }
+
+@media screen and (max-width: 575px) {
+    .testimonial-card {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .Testimonial-image {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      object-fit: contain;
+    }
+  
+    .feedback p {
+      width: 100%;
+      font-size: 1rem;
+    }
+  
+    .testimonial-cards {
+      flex-direction: row;
+      scroll-snap-align: start;
+      gap: 0; /* remove space between cards for clean fit */
+      padding: 0;
+    }
+  
+    .testimonial-card {
+      scroll-snap-align: start;
+      flex: 0 0 100%;
+    }
+  
+    .left,
+    .right {
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .testimonial-wrapper {
+      width: 50%;
+      position: relative;
+    }
+  
+    .testimonial-container {
+      width: 90%;
+      overflow-x: hidden;
+    }
+    .Testimonial-image {
+        width: 200px;
+        height: auto;
+        max-height: 250px;
+        object-fit: contain;
+      }
+  
+    .testimonial-cards {
+      gap: 10px;
+    }
+  
+    .testimonial-card {
+      flex: 0 0 900px;
+    }
+  
+    .left {
+      left: 40px;
+      position: absolute;
+    }
+  
+    .right {
+      right: -40px;
+      position: absolute;
+    }
+  
+    .testimonial-section h1 {
+      font-family: var(--primary-font);
+      font-size: 2.5rem; /* corrected size for larger screens */
+      font-weight: bold;
+      color: var(--tertiary-color);
+    }
+
+    .feedback p {
+        font-size: 1rem;
+        width: 50%;
+      }
+    .testimonial-card h4{
+        font-size: 2rem;
+    }
+  }
+  
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    .testimonial-container {
+      width: 100vw; /* max out the screen */
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 0;
+    }
+  
+    .testimonial-cards {
+      flex-direction: row;
+      scroll-snap-align: start;
+      gap: 10px;
+      width: max-content;
+      padding: 0;
+    }
+  
+    .testimonial-card {
+      flex: 0 0 100vw;
+      width: 100vw;
+      scroll-snap-align: start;
+      height: auto;
+      flex-direction: column;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  
+    .Testimonial-image {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      object-fit: contain;
+    }
+  
+    .feedback p {
+      font-size: 1rem;
+      width: 100%;
+    }
+  
+    .left,
+    .right {
+      display: none;
+    }
+  }
+  

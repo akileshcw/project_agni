@@ -40,8 +40,9 @@
     width: 800px;
     height: auto;
     opacity: 0.5;
-    border-radius:50px;
+    border-radius:20px;
     border-width:10px;
+    border-color:var(--primary-color);
 }
 
 #image2
@@ -54,20 +55,20 @@
   .floating-msg-suggestion {
     position: fixed;
     bottom:100px;
-    left: 100px;
-    background-color:var(--primary-color);
+    left: 500px;
+    background-color:var(--secondary-color);
     color:var(--tertiary-color);
     padding: 12px 16px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 999;
-    animation: floatUpDown 2s ease-in-out infinite; 
+    animation: floatUpDown 2s ease-in-out infinite;
   }
 
   .floating-msg-news {
     position: fixed;
     bottom:180px;
-    left: 180px;
+    left: 500px;
     background-color:var(--primary-color);
     color:var(--tertiary-color);
     padding: 12px 16px;
@@ -80,7 +81,7 @@
 
   .floating-msg-job {
     bottom:400px;
-    left: 340px;
+    left: 500px;
     position: fixed;
     background-color:var(--primary-color);
     color:var(--tertiary-color);
@@ -93,7 +94,7 @@
 
   .floating-msg-course {
     bottom:320px;
-    left: 260px;
+    left: 500px;
     position: fixed;
     background-color:var(--primary-color);
     color:var(--tertiary-color);

@@ -1,47 +1,75 @@
 .hero-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  position: relative;
   width: 100%;
-  height:100vh;
-  padding:40px;
-  background: linear-gradient(135deg,  
-  rgba(0, 0, 0, 0.9) 0%,   /* Almost pure black */
-  rgba(10, 10, 10, 0.85) 30%,  /* Slightly lighter black */
-  rgba(20, 20, 20, 0.8) 60%, /* Deep black with subtle transparency */
-  rgba(30, 30, 30, 0.7) 100% /* Very dark grey */
-);
-backdrop-filter: blur(15px);
--webkit-backdrop-filter: blur(15px);
-gap:12px;
-margin-bottom:-20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(10, 10, 10, 0.85) 30%,
+      rgba(20, 20, 20, 0.8) 60%,
+      rgba(30, 30, 30, 0.7) 100%
+    );
+   /* No comma in rgba gradient, then comma before url */
+
+  background-size: cover;
+  background-position: center;
+
+  
+
+  overflow: hidden;
 }
 
-.hero-section h1 {
-  font-size:5rem;
-  color:var(--tertiary-color);/* Example color */
+
+/*.illustrations-left {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.illustrations-left img {
+  max-width: 100%;
+  height: auto;
+}*/
+
+.hero-content {
+  
+
   text-align: center;
-  font-family: var(--primary-font);
-  font-weight: bold;
+  color: white;
+  padding: 20px;
  
 }
 
+
+.hero-section h1 {
+  font-size: 5rem;
+  color: var(--tertiary-color);
+  font-family: var(--primary-font);
+  font-weight: bold;
+}
+
 .hero-section h2 {
-  font-size:5rem;
-  text-align: center;
-  font-weight:800;
-  font-family:var(--primary-font);
-  color:var(--primary-color);
+  font-size: 5rem;
+  font-weight: 800;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
   margin-top: -20px;
 }
 
 .hero-section h3 {
-  font-size:1.5rem;
+  font-size: 1.5rem;
   font-weight: 100;
-  font-family:var(--secondary-color);
-  color:var(--tertiary-color);
-  text-align: center;
+  font-family: var(--secondary-font);
+  color: var(--tertiary-color);
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -49,82 +77,192 @@ margin-bottom:-20px;
 .hero-buttons {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 64px;
   margin-top: 20px;
-  
+}
+
+.Register-Student-primary,
+.Register-Recruiter-secondary {
+  font-family: 'Karla', sans-serif;
+  border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
 .Register-Student-primary {
   padding: 8px 30px;
-  font-family: 'karla','sans-serif';
   background-color: var(--primary-color);
   color: var(--tertiary-color);
-  border-radius:12px;
-  border-style: none
+  border:solid 2px;
 }
 
-.Register-Student-primary:hover{
-  background-color: var(--tertiary-color);
+.Register-Student-primary:hover {
+  background-color: var(--secondary-color);
   color: var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
-
 
 .Register-Recruiter-secondary {
   padding: 8px 12px;
-  color: var(--primary-color);
-  border-radius:12px;
-  border-style:solid;
-  border-width:2px;
   background-color: var(--secondary-color);
   color: var(--tertiary-color);
-  font-family: 'karla','sans-serif';
+  border: 2px solid var(--tertiary-color);
 }
 
-.Register-Recruiter-secondary:hover{
-  color:#ffffff;border-color: #ffffff;
+.Register-Recruiter-secondary:hover {
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
-.ilustrations{
-  display:flex;
-  justify-content:space-between;
-  flex-direction: column;
-  gap:50px;
-  position:absolute;
-  transform: translateY(-20px)translateX(540px);
-}
-
-.ilustrations-left:hover
-{
-  opacity:1;
-}
-
-.ilustrations-left{
-  display:flex;
-  justify-content:space-between;
-  flex-direction: column;
-  gap:50px;
-  position:absolute;
-  transform: translateY(-20px)translateX(-540px);
-}
-.ai h1 {
-  display: hidden;
-}
-.ai,.cyber,.cloud
-{ display: flex;
-  flex-direction: column;
-  width: 180px;
-  height: auto;
+.illustrations-left {
+  position: absolute;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 0; /* send to back */
   opacity: 0.2;
-  z-index:0;
+  pointer-events: none; /* allows clicks to pass through if needed */
 }
 
-.ai:hover,.cyber:hover,.cloud:hover
-{
-  opacity:1;
-  animation: fadeIn 0.3s ease;
+.illustrations-left:hover {
+  opacity: 1;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* Styles for very small screens */
+  .hero-section h1,
+  .hero-section h2 {
+    font-size:2rem !important;    
+    text-align: center;  
+        
+  }
+
+  .hero-section h3 {
+    font-size: 0.15rem;
+    white-space:wrap;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column-reverse; /* this is fine if you want "Join Now" on top */
+    gap: 1rem;
+    width: 100%; /* Ensure parent takes full width */
+  }
+  
+  .Register-Student-primary,
+  .Register-Recruiter-secondary {
+    padding: 4px 8px;
+    width: 100%;          /* Stretch inside .hero-buttons */
+    max-width: 50%;       /* Optional: Limit stretch to 50% of parent */
+    display: block;       /* Allow width to apply */
+    margin: 0 auto;       /* Center the button if it's less than 100% width */
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+  }
 }
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  /* Styles for small tablets */
+  .hero-section h1,
+  .hero-section h2 {
+    font-size:2.5rem !important;    
+    text-align: center;  
+        
+  }
+
+  .hero-section h3 {
+    font-size: 0.3rem;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column-reverse; /* this is fine if you want "Join Now" on top */
+    gap: 1rem;
+    width: 100%; /* Ensure parent takes full width */
+  }
+  
+  .Register-Student-primary,
+  .Register-Recruiter-secondary {
+    padding: 8px 16px;
+    width: 100%;          /* Stretch inside .hero-buttons */
+    max-width: 50%;       /* Optional: Limit stretch to 50% of parent */
+    display: block;       /* Allow width to apply */
+    margin: 0 auto;       /* Center the button if it's less than 100% width */
+    box-sizing: border-box;
+  }
+
+  .illustrations-left {
+    transform: translate(-50%, -50%) scale(0.7);
+    gap: 20px;
+  }
+}
+
+
+/* medium tab */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .hero-section h1,
+  .hero-section h2 {
+    font-size:3rem;
+  }
+
+  .hero-section h3 {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column-reverse; /* this is fine if you want "Join Now" on top */
+    gap: 1rem;
+    width: 100%; /* Ensure parent takes full width */
+  }
+  
+  .Register-Student-primary,
+  .Register-Recruiter-secondary {
+    padding: 8px 16px;
+    width: 100%;          /* Stretch inside .hero-buttons */
+    max-width: 50%;       /* Optional: Limit stretch to 50% of parent */
+    display: block;       /* Allow width to apply */
+    margin: 0 auto;       /* Center the button if it's less than 100% width */
+    box-sizing: border-box;
+  }
+
+  .illustrations-left {
+    transform: translate(-50%, -50%) scale(0.7);
+    gap: 20px;
+  }
+}
+
+/*laptop*/
+@media (max-width: 1024px) {
+  .hero-section h1,
+  .hero-section h2 {
+    font-size: 3.5rem;
+  }
+
+  .hero-section h3 {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+
+  .hero-buttons {
+    flex-direction:row;
+    justify-items: center;
+    gap: 20px;
+  }
+
+  .illustrations-left {
+    transform: translate(-50%, -50%) scale(0.85);
+    gap: 30px;
+  }
+}
+
+
+
+
+
+
+
+

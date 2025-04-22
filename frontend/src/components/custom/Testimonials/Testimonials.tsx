@@ -10,26 +10,32 @@ const Testimonials = () => {
     
     const handleScroll = (direction: "left" | "right") => {
         if (carouselRef.current) {
-            const scrollAmount = 920; // Adjust to fit card width + gap
+            const card = carouselRef.current.querySelector(".testimonial-card") as HTMLElement;
+    
+            // Get actual width of a card + the gap
+            const cardStyle = window.getComputedStyle(card);
+            const gap = parseInt(cardStyle.marginRight || "30", 10); // fallback to 20px
+    
+            const cardWidth = card.offsetWidth + gap;
+    
+            const maxScroll = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
             const newPosition =
                 direction === "left"
-                    ? Math.max(scrollPosition - scrollAmount, 0)
-                    : Math.min(
-                          scrollPosition + scrollAmount,
-                          carouselRef.current.scrollWidth - carouselRef.current.clientWidth
-                      );
-
+                    ? Math.max(scrollPosition - cardWidth, 0)
+                    : Math.min(scrollPosition + cardWidth, maxScroll);
+    
             setScrollPosition(newPosition);
             carouselRef.current.scrollTo({ left: newPosition, behavior: "smooth" });
         }
     };
+    
 
     return (
         <div className="testimonial-section">
             <h1>Testimonials & Success Stories</h1>
             <div className="testimonial-wrapper">
-                <button className="scroll-btn left" onClick={() => handleScroll("left")}>
-                    ◀
+                <button className="scroll-btn left" >
+                <span className="material-symbols-outlined" onClick={() => handleScroll("left")}>arrow_back_ios</span>
                 </button>
 
                 <div className="testimonial-container" ref={carouselRef}>
@@ -53,8 +59,7 @@ const Testimonials = () => {
                         <div className="testimonial-card">
                             <img className="Testimonial-image" src={studentMale} alt="Testimonial" />
                             <div className="feedback">
-                                <p>"As someone transitioning into tech, I needed a course that provided both knowledge and credibility.
-                                The EdTech program not only enhanced my technical skills but also gave me access to hiring opportunities 
+                                <p>"The EdTech program not only enhanced my technical skills but also gave me access to hiring opportunities 
                                 through their job placement assistance. I secured my dream job within a month of completing the certification!"</p>
                                 <h4>Harry, Graduate</h4>
                             </div>
@@ -62,8 +67,8 @@ const Testimonials = () => {
                     </div>
                 </div>
 
-                <button className="scroll-btn right" onClick={() => handleScroll("right")}>
-                    ▶
+                <button className="scroll-btn right" onClick={() => handleScroll("right")} >
+                <span className="material-symbols-outlined" >arrow_forward_ios</span>
                 </button>
             </div>
         </div>
