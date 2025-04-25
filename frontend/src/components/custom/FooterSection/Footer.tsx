@@ -5,10 +5,11 @@ export function Footer() {
     return (
         <>
         <div className='footer-signup-section'>
-        <h1>Ready to Transform Your Career or Discover Top Talent?</h1>
+        <h1 id="toph1">Your dream job or team</h1>
+        <h1  id="bottomh1">one step away</h1>
         <div className='buttons'>
             <button className="footer-sign-up">Sign Up Now</button>
-            <button className="contact-sales">Contsct Sales</button>
+            <button className="contact-sales">Contact Sales</button>
         </div>
         <div className="footer-div">
             {/* Quick Links Section */}
@@ -23,15 +24,7 @@ export function Footer() {
                 </ul>
             </div>
 
-            {/* Contact Section */}
-            <div className="contact-info">
-                <ul>
-                    <li className='list-heading'>Contact</li>
-                    <li className='list-item'>Phone: +91 98765 43210</li>
-                    <li className='list-item'>Email: info@example.com</li>
-                    <li className='list-item'>Address: Bengaluru, India</li>
-                </ul>
-            </div>
+            
 
             {/* Social Media Section */}
             <div className="social-media">
@@ -44,7 +37,8 @@ export function Footer() {
                 </ul>
             </div>
 
-            {/* Other Information */}
+
+            {/* Other Information 
             <div className="about-us">
                 <ul>
                     <li className='list-heading'>About Us</li>
@@ -52,6 +46,17 @@ export function Footer() {
                     <li className='list-item'>Careers</li>
                     <li className='list-item'>Privacy Policy</li>
                     <li className='list-item'>Terms of Service</li>
+                </ul>
+            </div>*/}
+
+            
+            {/* Contact Section */}
+            <div className="contact-info">
+                <ul>
+                    <li className='list-heading'>Contact</li>
+                    <li className='list-item'>Phone: +91 98765 43210</li>
+                    <li className='list-item'>Email: info@example.com</li>
+                    <li className='list-item'>Address: Bengaluru, India</li>
                 </ul>
             </div>
         </div>

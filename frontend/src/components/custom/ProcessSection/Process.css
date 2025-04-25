@@ -72,7 +72,7 @@
 
 /*Hidden description div */
 .description {
-    background:#000000; /* Darker background */
+    
     border-color:  var(--secondary-color);
     color: var(--tertiary-color) !important; /* Fully bright text */
     display: flex;

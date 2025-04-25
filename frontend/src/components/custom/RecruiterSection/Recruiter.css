@@ -50,12 +50,100 @@
 
 
 
-  h4{
-    font-weight: 500;
+  h3{
+    font-weight: 200;
     color:var(--tertiary-color);
     font-family:var(--secondary-font);
+    text-align:center;
   }
 
- .recuiter-section h1{
-    color:var(--secondary-color);
+
+/* Extra Large (1200px and up) */
+@media (min-width: 1200px) {
+  .recruiter-section {
+    height: 600px;
   }
+
+  .recruiter-section h1,
+  .recruiter-section h2 {
+    font-size: 5rem;
+  }
+}
+
+/* Large devices (992px to 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .recruiter-section {
+    height: 500px;
+  }
+
+  .recruiter-section h1,
+  .recruiter-section h2 {
+    font-size: 4rem;
+  }
+}
+
+/* Medium devices (768px to 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .recruiter-section {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .recruiter-section h1,
+  .recruiter-section h2 {
+    font-size: 3rem;
+  }
+
+  .recruiter-section h4 {
+    font-size: 1rem;
+  }
+
+  .recruiter-cta {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small devices (576px to 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .recruiter-section {
+    height: auto;
+    padding: 30px 16px;
+  }
+
+  .recruiter-section h1,
+  .recruiter-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .recruiter-section h4 {
+    font-size: 0.95rem;
+  }
+
+  .recruiter-cta {
+    padding: 7px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small devices (less than 576px) */
+@media (max-width: 575.98px) {
+  .recruiter-section {
+    height: auto;
+    padding: 20px 12px;
+  }
+
+  .recruiter-section h1,
+  .recruiter-section h2 {
+    font-size: 2.3rem;
+  }
+
+  .recruiter-section h4 {
+    font-size: 0.9rem;
+  }
+
+  .recruiter-cta {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}

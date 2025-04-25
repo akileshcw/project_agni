@@ -1,4 +1,8 @@
-//import learnerpic1 from '@/assets/LearnerSection-Informed.png';
+import learnerpic1 from '@/assets/Process_informed-removebg-preview.png';
+import learnerpic2 from '@/assets/Process_upskill-removebg-preview.png';
+import learnerpic3 from '@/assets/Process_certify-removebg-preview.png'
+import hrpic1 from'@/assets/Process_connect.png';
+import hrpic2 from '@/assets/Process_interview.png';
 //import learnerpic2 from '@/assets/LearnerSection-Coder.jpeg';
 import './Process.css';
 
@@ -13,21 +17,21 @@ export function Process() {
                     <div className='pic1'>
                         <h3>Stay Informed</h3>
                         <div className="description">
-                            <p>You will receive curated news updates on your chosen tech topic. Stay informed with the latest trends, insights, and breakthroughs. Get timely and relevant feeds tailored to your interests. Whether it's AI, web development, or cybersecurity, you'll always be up to date. Never miss an important update in your field of interest!</p>
+                           <img src={learnerpic1} alt="stay updated"></img>
                         </div>
                     </div>
                     <div className='pic2'>
                         
                         <h3>Upskill Yourself</h3>
                         <div className="description">
-                            <p>You will receive curated news updates on your chosen tech topic. Stay informed with the latest trends, insights, and breakthroughs. Get timely and relevant feeds tailored to your interests. Whether it's AI, web development, or cybersecurity, you'll always be up to date. Never miss an important update in your field of interest!</p>
+                        <img src={learnerpic2} alt="upskill"></img>
                             </div>
                         </div>
                         <div className='pic3'>
                         
                         <h3>Get Certified</h3>
                         <div className="description">
-                            <p>You will receive curated news updates on your chosen tech topic. Stay informed with the latest trends, insights, and breakthroughs. Get timely and relevant feeds tailored to your interests. Whether it's AI, web development, or cybersecurity, you'll always be up to date. Never miss an important update in your field of interest!</p>
+                        <img src={learnerpic3} alt="certification"></img>
                             </div>
                         </div>
                     </div>
@@ -39,14 +43,14 @@ export function Process() {
                     <div className='pic1'>
                         <h3>Connect Easily</h3>
                         <div className="description">
-                            <p>You will receive curated news updates on your chosen tech topic. Stay informed with the latest trends, insights, and breakthroughs. Get timely and relevant feeds tailored to your interests. Whether it's AI, web development, or cybersecurity, you'll always be up to date. Never miss an important update in your field of interest!</p>
+                            <img src={hrpic1} alt="people connecting" />
                         </div>
                     </div>
                     <div className='pic2'>
                         
                         <h3>Discover Talent</h3>
                         <div className="description">
-                            <p>You will receive curated news updates on your chosen tech topic. Stay informed with the latest trends, insights, and breakthroughs. Get timely and relevant feeds tailored to your interests. Whether it's AI, web development, or cybersecurity, you'll always be up to date. Never miss an important update in your field of interest!</p>
+                            <img src={hrpic2} alt="Find the right talent" />
                             </div>
                         </div>
                     </div>
